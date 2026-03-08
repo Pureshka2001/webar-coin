@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAR — Coin</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    body{margin:0;font-family:Arial;background:#111;color:#fff}
+    header{padding:14px 16px}
+    model-viewer{width:100vw;height:80vh;background:#222}
+    .tip{padding:10px 16px;opacity:.85;font-size:14px;line-height:1.4}
+  </style>
+</head>
+<body>
+  <header>
+    <b>AR DEMO — модель</b>
+    <div class="tip">Открыть с телефона → нажми кнопку AR.</div>
+  </header>
+
+  <model-viewer
+    src="./model/my-coin.glb"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1"
+    exposure="1">
+  </model-viewer>
+
+  <div class="tip">Модель сделана в Blender и экспортирована в GLB.</div>
+</body>
+</html>
